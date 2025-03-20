@@ -30,6 +30,13 @@ popd
 chown -R $app:$app "$install_dir"
 
 #=================================================
+# UPDATE A CONFIG FILE
+#=================================================
+#ynh_script_progression "Updating $app's configuration files..."
+
+#ynh_config_add --template="glances.conf" --destination="$install_dir/venv/share/doc/glances/glances.conf"
+
+#=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
