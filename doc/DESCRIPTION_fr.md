@@ -1,0 +1,1 @@
+Glances est un outil de surveillance multiplateforme qui vise à présenter un maximum d'informations dans un minimum d'espace par le biais d'une interface basée sur curses ou sur le Web. Il peut adapter dynamiquement les informations affichées en fonction de la taille du terminal.
