@@ -17,7 +17,7 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 # INSTALL PYTHON DEPENDENCIES
 #=================================================
-ynh_script_progression "Installing Python dependencies..."
+ynh_script_progression "Upgrading Python dependencies..."
 
 pushd $install_dir
     python3 -m venv $install_dir/venv
@@ -26,6 +26,8 @@ pushd $install_dir
 	ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade psutil
     ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade glances[all]==$(ynh_app_upstream_version)
 popd
+
+chown -R $app:$app "$install_dir"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
