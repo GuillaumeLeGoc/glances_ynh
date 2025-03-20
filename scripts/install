@@ -25,8 +25,6 @@ chown -R $app:$app "$install_dir"
 #=================================================
 #ynh_script_progression "Adding $app's configuration files..."
 
-#ynh_config_add --template="glances.conf" --destination="$install_dir/.config/glances/glances.conf"
-#or
 #ynh_config_add --template="glances.conf" --destination="$install_dir/venv/share/doc/glances/glances.conf"
 
 #=================================================
